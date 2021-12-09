@@ -1,13 +1,12 @@
-import React, { setState, createContext } from "react";
+import React, { useState, createContext } from "react";
 import Login from "./Login";
-import {Button, Container, Form} from "react-bootstrap";
 
 const AppContext = createContext(null);
 
 function App() {
 
-  const [email, setEmail] = setState("");
-  const [password, setPassword] = setState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   return (
     <main>
