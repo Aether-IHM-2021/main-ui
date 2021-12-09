@@ -1,11 +1,15 @@
+import React, { createContext } from "react"
 
 function App() {
+
+  const AppContext = createContext(null);
   return (
-    <div className="App">
+    <AppContext.Provider className="App">
       <header className="App-header">
-    GOODLUCK AETHER
+          GOODLUCK AETHER
       </header>
-    </div>
+      <Login /> <User />
+    </AppContext.Provider>
   );
 }
 
