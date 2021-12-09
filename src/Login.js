@@ -29,6 +29,7 @@ const Login = () => {
 
     return (
         <Container>
+            <h1> LOG IN </h1>
             <Form>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
@@ -45,7 +46,7 @@ const Login = () => {
                 {   (event) => { setPassword(event.target.value); }   }/>
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                <Container>
+                <Container className="p-0">
                     <Row>
                         <Col xs={{span: 4}}><Form.Check type="checkbox" label="Remember Me" /></Col>
                         <Col xs={{span: 2, offset: 6}} className="ml-auto"><a className="text-muted" href="" style={{textDecoration: 'none'}}>Forgot your password?</a></Col>
@@ -53,10 +54,24 @@ const Login = () => {
                 </Container>
                 
                 </Form.Group>
-                <Button variant="primary" type="submit" onclick={logUser}>
-                    Submit
-                </Button>
+                <Container>
+                    <Row>
+                        <Col as={Button} xs={{span: 8, offset: 2}} variant="primary" type="submit" onclick={logUser}>
+                            LOG IN     
+                        </Col>
+                    </Row>
+                </Container>
+                
             </Form>
+            <Container className="mx-auto">
+                    <Row>
+                        <Col xs={{span: 5}}></Col>
+                        <Col xs={{span: 2}}>
+                        <a className="text-muted text-center" href="" style={{textDecoration: 'none'}}>Don't have an account?</a>
+                        </Col>
+                        <Col xs={{span: 5}}></Col>
+                    </Row>
+            </Container>
         </Container>
     );
 };
