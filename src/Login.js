@@ -1,49 +1,53 @@
 import React, { createContext, useContext } from "react";
 import axios from "axios";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 import {Container, Button, Form, Col, Row} from "react-bootstrap"; 
-import {AppContext} from "./App.js";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { AppContext } from "./App";
 
 const Login = () => {
-    const {setEmail, setPassword, email, password} = useContext(AppContext);
+    // use this to switch between components
+    //const {changePage} = useContext(AppContext);
 
-    // check authentication from website
-    function logUser(){
-        console.log(email);
-        console.log(password);
-        const token = Buffer.from(`${email}:${password}`, 'utf8').toString('base64');
-
-        // debug function: remove when auth url is provided
-        console.log(token);
-
-        const url = "https://...";
-        
-        /*
-        axios.post(url, {
-            headers: {
-              'Authorization': `Basic ${token}`
-            }
-          });
-          */
-    }
+    const formik = useFormik({
+        initialValues: {
+            email: "",
+            password: "",
+        },
+        validationSchema: Yup.object({
+            email : Yup.string()
+            .email("Please input a valid email").required("Please enter your email"),
+            password: Yup.string()
+            .required('Please Enter your password')
+        }),
+        onSubmit: (values) => {
+            // do what is needed to the data :>
+        }
+    });
 
     return (
         <Container>
-            <h1> LOG IN </h1>
+            <h1 variant="h1"> LOG IN </h1>
             <Form>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
 
-                <Form.Control type="email" placeholder="Email" onClick=
-                {   (event) => { setEmail(event.target.value); }   }/>
-                <Form.Text className="text-muted">
-                    We'll never share your email with anyone else.
-                </Form.Text>
+                <Form.Control id="email" name="email" type="email" placeholder="Email" 
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.email}
+                />
+                {formik.errors.email && formik.touched.email ? <p>{formik.errors.email}</p> : null}
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                 
-                <Form.Control type="password" placeholder="Password" onClick=
-                {   (event) => { setPassword(event.target.value); }   }/>
+                <Form.Control id="password" name="password" type="password" placeholder="Password" 
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.password}
+                />
+                {formik.touched.password && formik.errors.password ? <p>{formik.errors.password}</p> : null}
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                 <Container className="p-0">
@@ -56,7 +60,7 @@ const Login = () => {
                 </Form.Group>
                 <Container>
                     <Row>
-                        <Col as={Button} xs={{span: 8, offset: 2}} variant="primary" type="submit" onclick={logUser}>
+                        <Col as={Button} xs={{span: 8, offset: 2}} variant="primary" type="submit">
                             LOG IN     
                         </Col>
                     </Row>
