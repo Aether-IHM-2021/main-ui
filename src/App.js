@@ -1,21 +1,23 @@
-import React, { createContext } from "react";
-import Login from "./Login.js";
+import React, { setState, createContext } from "react";
+import Login from "./Login";
+import {Button, Container, Form} from "react-bootstrap";
 
 const AppContext = createContext(null);
 
 function App() {
 
-  const [username, setUsername] = setState("");
   const [email, setEmail] = setState("");
-  const [passsword, setPassword] = setState("");
+  const [password, setPassword] = setState("");
 
   return (
-    <AppContext.Provider className="App">
+    <main>
+      <AppContext.Provider className="App" value={{email, setEmail, password, setPassword}}>
       <header className="App-header">
           GOODLUCK AETHER
       </header>
       <Login /> 
-    </AppContext.Provider>
+      </AppContext.Provider>
+    </main>
   );
 }
 

@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
 import axios from "axios";
-import {Container, Button} from "react-bootstrap"; 
-import AppContext from "App";
+import {Container, Button, Form} from "react-bootstrap"; 
+import {AppContext} from "./App.js";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Login = () => {
-    const {setEmail, setPassword, email, password} = useContext(AppContext);
+    const [setEmail, setPassword, email, password] = useContext(AppContext);
 
     // check authentication from website
     function logUser(){
