@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import PropTypes from "prop-types";
-import defaultTextStyle from "@/components/atoms/defaultTextStyle";
+import defaultTextStyle from "../defaultTextStyle";
 
 const Text = styled.p`
   ${defaultTextStyle}
@@ -67,5 +67,4 @@ Text.propTypes = {
   weight: PropTypes.string,
 };
 
-/** @component */
 export default Text;
