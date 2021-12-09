@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { COLOR } from "../../../constants/color.js"
 
 const RoundButton = styled.button`
-    background-color: ${COLOR.mainBlue[500]};
+    background-color: transparent;
     border: 3px solid ${COLOR.mainBlue[500]};
     height: 3rem;
     min-width: 12em;
@@ -18,7 +18,7 @@ const RoundButton = styled.button`
     margin: auto auto;
 
     &:hover {
-        background-color: ${COLOR.mainBlue[400]};
+        background-color: ${COLOR.mainBlue[500]};
         color: white;
         transition-duration: 0.3s;
     }

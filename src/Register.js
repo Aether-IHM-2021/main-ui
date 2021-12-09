@@ -3,13 +3,14 @@ import axios from "axios";
 import {Container, Stack, Button, Form, Col, Row} from "react-bootstrap"; 
 import {RegisterContext} from "./App.js";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Text from "./components/atoms/Text/index.jsx";
 
 const Register = () => {
     const {firstName, setFirstName, lastName, setLastName, email, setEmail, password, setPassword} = useContext(RegisterContext);
 
     return (
         <Container>
-            <h1> REGISTER </h1>
+            <Text variant="h2"> REGISTER </Text>
             <Form>
                 <Form.Group className="mb-3" controlId="formBasicName">
                 <Container className="p-0 m-0">
