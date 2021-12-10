@@ -1,11 +1,7 @@
 import React from "react";
-import { useFormik } from "formik";
-import * as Yup from "yup";
 import {Container, Button, Stack, Col, Row} from "react-bootstrap"; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Text from "./components/atoms/Text/index.jsx";
-import { useParams } from "react-router";
-import axios from "axios";
 
 const Notification = (values) => {
     const {title} = values;
