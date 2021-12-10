@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { useFormik } from "formik";
 import { useHistory } from "react-router";
 import * as Yup from "yup";
-import { Container, Button, Form, Col, Row } from "react-bootstrap";
+import { Container, Button, Form, Col, Row, Alert } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Text from "./components/atoms/Text/index.jsx";
 
 const Login = () => {
+  const [success, setSuccess] = useState(false);
   let history = useHistory();
   const formik = useFormik({
     initialValues: {
@@ -59,6 +60,7 @@ const Login = () => {
             <p>{formik.errors.password}</p>
           ) : null}
         </Form.Group>
+
         <Form.Group className="mb-3" controlId="formBasicCheckbox">
           <Container className="p-0">
             <Row>
@@ -84,12 +86,18 @@ const Login = () => {
               xs={{ span: 8, offset: 2 }}
               variant="primary"
               type="submit"
+              onClick={() => setSuccess(true)}
             >
               LOG IN
             </Col>
           </Row>
         </Container>
       </Form>
+      {success ? (
+        <Alert className="my-4" variant="success">
+          Successfully Login
+        </Alert>
+      ) : null}
       <Container className="mx-auto">
         <Row>
           <Col xs={{ span: 3 }}></Col>
