@@ -6,8 +6,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Text from "./components/atoms/Text/index.jsx";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import { useHistory } from "react-router/cjs/react-router.min";
 
 const Register = () => {
+  let history = useHistory();
   const { userType } = useParams();
 
   const formik = useFormik({
@@ -41,19 +43,9 @@ const Register = () => {
       ),
     }),
     onSubmit: (values) => {
-      const { confirmPassword, ...others } = values;
-      const data = { ...others, userType };
-      const response = axios
-        .post("http://localhost:8000/users", data)
-        .catch((err) => {
-          if (err && err.response) {
-            console.log("Error: ", err);
-          }
-        });
-
-      if (response && response.data) {
-        console.log(response.data.message);
-      }
+      setTimeout(() => {
+        history.push("/login");
+      }, 4000);
     },
   });
 
@@ -163,16 +155,16 @@ const Register = () => {
         </Form.Group>
 
         <Container>
-              <Row>
-                <Col
-                  as={Button}
-                  xs={{ span: 8, offset: 2 }}
-                  variant="primary"
-                  type="submit"
-                >
-                  REGISTER
-                </Col>
-              </Row>
+          <Row>
+            <Col
+              as={Button}
+              xs={{ span: 8, offset: 2 }}
+              variant="primary"
+              type="submit"
+            >
+              REGISTER
+            </Col>
+          </Row>
         </Container>
       </Form>
     </Container>

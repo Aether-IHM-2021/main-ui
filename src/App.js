@@ -9,7 +9,11 @@ import Verify2 from "./Verify2";
 import UserType from "./UserType";
 import CreateTopic from "./CreateTopic";
 import Main from "./Main";
+import Dashboard from "./Dashboard";
 import Notifications from "./Notifications";
+import Navigation from "./components/Nav/Nav";
+import Proposal from "./Proposal";
+import Profile from "./Profile";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
@@ -25,8 +29,9 @@ function App() {
     >
       <Router>
         <header variant="h1" className="App-header"></header>
+        <Navigation />
         <Switch>
-        <Route exact path="/">
+          <Route exact path="/">
             {" "}
             <Main />{" "}
           </Route>
@@ -61,6 +66,18 @@ function App() {
           <Route exact path="/scratch">
             {" "}
             <Scratch />{" "}
+          </Route>
+          <Route exact path="/dashboard">
+            {" "}
+            <Dashboard />{" "}
+          </Route>
+          <Route exact path="/proposal">
+            {" "}
+            <Proposal />{" "}
+          </Route>
+          <Route exact path="/profile">
+            {" "}
+            <Profile />{" "}
           </Route>
         </Switch>
       </Router>
