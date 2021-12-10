@@ -45,7 +45,7 @@ const Register = () => {
     onSubmit: (values) => {
       setTimeout(() => {
         history.push("/login");
-      }, 4000);
+      }, 3000);
     },
   });
 

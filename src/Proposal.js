@@ -41,6 +41,23 @@ const Proposal = () => {
         <a style={{ fontSize: "14px", color: "grey" }}>Concerns</a>
       </div>
       <div className="pt-5">
+      {localStorage["title"] && (
+        <Card style={{ width: "100%" }}>
+        <Card.Body>
+          <Card.Title>
+            {localStorage["title"]}
+          </Card.Title>
+          <small className="text-muted">
+            {new Date().toLocaleString()}
+          </small>
+          <Card.Text>
+          {localStorage["description"]}
+          </Card.Text>
+          <small className="text-muted">
+          </small>
+        </Card.Body>
+      </Card>
+      )}
         <Card style={{ width: "100%" }}>
           <Card.Img height="200" variant="top" src={Logo} />
           <Card.Body>

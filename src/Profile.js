@@ -21,6 +21,23 @@ const Profile = () => {
         <a style={{ color: "grey" }}>Accomplished Projects</a>
       </div>
       <hr></hr>
+      {localStorage["title"] && (
+        <Card style={{ width: "100%" }}>
+        <Card.Body>
+          <Card.Title>
+            {localStorage["title"]}
+          </Card.Title>
+          <small className="text-muted">
+            {new Date().toLocaleString()}
+          </small>
+          <Card.Text>
+          {localStorage["description"]}
+          </Card.Text>
+          <small className="text-muted">
+          </small>
+        </Card.Body>
+      </Card>
+      )}
       <div>
         <Card style={{ width: "100%" }}>
           <Card.Img

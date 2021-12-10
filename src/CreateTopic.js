@@ -6,7 +6,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Text from "./components/atoms/Text/index.jsx";
 import { useParams } from "react-router";
 import axios from "axios";
+import { useHistory } from "react-router";
+
 const CreateTopic = () => {
+  let history = useHistory();
     
     const { topic } = useParams();
 
@@ -28,40 +31,47 @@ const CreateTopic = () => {
           link: Yup.string()
         }),
         onSubmit: (values) => {
-          let data = {};
-          // conditional values for topics
-          if(topic === "proposals"){
-            const likes = 0;
-            const concerns = 0;
-            const concernsArray = Array();
-            data = {topic, likes, concerns, concernsArray, ...values};
-          }
-          else if(topic === "announcements"){
-            data = {topic, ...values};
-          }
-          else if(topic === "concerns"){
-            const proposalsId = 0;
-            data = {topic, proposalsId, ...values};
-          }
-          else{}
+          localStorage.setItem("title",values.title)
+          localStorage.setItem("description",values.description)
+          localStorage.setItem("category",values.category)
+          localStorage.setItem("link",values.link)
+          setTimeout(() => {
+            history.push("/proposal");
+          },2000)
+          // let data = {};
+          // // conditional values for topics
+          // if(topic === "proposals"){
+          //   const likes = 0;
+          //   const concerns = 0;
+          //   const concernsArray = Array();
+          //   data = {topic, likes, concerns, concernsArray, ...values};
+          // }
+          // else if(topic === "announcements"){
+          //   data = {topic, ...values};
+          // }
+          // else if(topic === "concerns"){
+          //   const proposalsId = 0;
+          //   data = {topic, proposalsId, ...values};
+          // }
+          // else{}
 
-          const response = axios
-            .post("http://localhost:8000/topics", data)
-            .catch((err) => {
-              if (err && err.response) {
-                console.log("Error: ", err);
-              }
-            });
-    
-          if (response && response.data) {
-            console.log(response.data.message);
-          }
+    //       const response = axios
+    //         .post("http://localhost:8000/topics", data)
+    //         .catch((err) => {
+    //           if (err && err.response) {
+    //             console.log("Error: ", err);
+    //           }
+    //         });
+    // 
+    //       if (response && response.data) {
+    //         console.log(response.data.message);
+    //       }
         }
       });
     
   return (
         <Container>
-          <Text variant="h2" >New {topic}</Text>
+          <Text variant="h2" >New { topic}</Text>
     
           <Form onSubmit={formik.handleSubmit}>
 
@@ -149,7 +159,6 @@ const CreateTopic = () => {
                 </Col>
               </Row>
             </Container>
-
           </Form>
       </Container>
   );

@@ -5,36 +5,36 @@ import "./styles.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faClipboardCheck,
-  faHome,
-  faPlusCircle,
-  faBell,
-  faUser,
-} from "@fortawesome/free-solid-svg-icons";
+  BsHouseDoor,
+  BsClipboardCheck,
+  BsBellFill,
+  BsPersonFill,
+  BsPlusSquareFill,
+} from "react-icons/bs";
 
 const tabs = [
   {
     route: "/dashboard",
-    icon: faHome,
+    icon: BsHouseDoor,
     label: "Home",
   },
   {
     route: "/proposal",
-    icon: faClipboardCheck,
+    icon: BsClipboardCheck,
     label: "Proposals",
   },
   {
     route: "/",
-    icon: faPlusCircle,
+    icon: BsPlusSquareFill,
   },
   {
     route: "/notifications",
-    icon: faBell,
+    icon: BsBellFill,
     label: "Notifications",
   },
   {
     route: "/profile",
-    icon: faUser,
+    icon: BsPersonFill,
     label: "Profile",
   },
 ];
@@ -44,20 +44,44 @@ const Navigation = (props) => {
     <div>
       <nav className="navbar fixed-bottom navbar-light" role="navigation">
         <Nav className="w-100">
-          <div className=" d-flex flex-row justify-content-around w-100 bg-white">
-            {tabs.map((tab, index) => (
-              <NavItem key={`tab-${index}`}>
+          <div  className=" d-flex align-items-center justify-content-evenly w-100 bg-white">
+              <NavItem  className=" d-flex align-items-center justify-content-evenly w-100 bg-white">
                 <NavLink
-                  to={tab.route}
+                  to="/dashboard"
                   className="nav-link"
                   activeClassName="active"
                 >
-                  <div className="row d-flex flex-column justify-content-center align-items-center">
-                    <div>{tab.label}</div>
-                  </div>
+                  <BsHouseDoor/>
+                </NavLink>
+                <NavLink
+                  to="/proposal"
+                  className="nav-link"
+                  activeClassName="active"
+                >
+                  <BsClipboardCheck/>
+                </NavLink>
+                <NavLink
+                  to="/create/:topic"
+                  className="nav-link"
+                  activeClassName="active"
+                >
+                  <BsPlusSquareFill/>
+                </NavLink>
+                <NavLink
+                  to="/notifications"
+                  className="nav-link"
+                  activeClassName="active"
+                >
+                  <BsBellFill/>
+                </NavLink>
+                <NavLink
+                  to="/profile"
+                  className="nav-link"
+                  activeClassName="active"
+                >
+                  <BsPersonFill/>
                 </NavLink>
               </NavItem>
-            ))}
           </div>
         </Nav>
       </nav>
