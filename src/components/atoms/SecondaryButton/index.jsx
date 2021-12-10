@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import { COLOR } from "../../../constants/color.js"
 
-const RoundButton = styled.button`
+const SecondaryButton = styled.button`
     background-color: transparent;
-    border: 3px solid ${COLOR.mainBlue[500]};
+    border: 3px solid ${COLOR.mainBlue[400]};
     height: 3rem;
     min-width: 12em;
     padding: 0 3rem;
-    color: ${COLOR.mainBlue[500]};
+    color: ${COLOR.mainBlue[400]};
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -18,10 +18,10 @@ const RoundButton = styled.button`
     margin: auto auto;
 
     &:hover {
-        background-color: ${COLOR.mainBlue[500]};
+        background-color: ${COLOR.mainBlue[400]};
         color: white;
         transition-duration: 0.3s;
     }
 `;
 
-export default RoundButton;
+export default SecondaryButton;
