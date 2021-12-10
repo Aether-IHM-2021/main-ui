@@ -1,10 +1,8 @@
 import React from "react";
 import { Nav, NavItem } from "reactstrap";
-import { Dropdown } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import "./styles.css";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   BsHouseDoor,
   BsClipboardCheck,

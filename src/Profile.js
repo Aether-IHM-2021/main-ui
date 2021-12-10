@@ -11,7 +11,7 @@ const Profile = () => {
       <div className="mt-3 d-flex justify-content-center align-items-center flex-column">
         <p className="mt-5 text-center">{localStorage.getItem("firstName")} {localStorage.getItem("lastName")}</p>
         <button style={{ borderRadius: "25px" }} className="btn btn-danger">
-          Not Verify
+          Not Verified
         </button>
       </div>
       <hr></hr>
