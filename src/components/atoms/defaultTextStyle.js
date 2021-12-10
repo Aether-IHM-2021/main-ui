@@ -6,6 +6,7 @@ const defaultTextStyle = css`
     font-weight: normal;
     letter-spacing: normal;
     line-height: normal;
+    margin: 0;
 `;
 
 export default defaultTextStyle;
