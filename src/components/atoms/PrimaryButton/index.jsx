@@ -18,7 +18,8 @@ const PrimaryButton = styled.button`
     margin: auto auto;
 
     &:hover {
-        background-color: ${COLOR.mainBlue[400]};
+        border: 3px solid ${COLOR.mainBlue[300]};
+        background-color: ${COLOR.mainBlue[300]};
         color: white;
         transition-duration: 0.3s;
     }
