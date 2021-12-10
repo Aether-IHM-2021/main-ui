@@ -1,26 +1,32 @@
 {
-    "users": [
-        {
-            "id": 1,
-            "firstName": "Eri",
-            "lastName": "Kashiwagi",
-            "email": "erikashiwagi@hotmail.com",
-            "password": "blahblahblah"
-        },
-        {
-            "id": 2,
-            "firstName": "Denki",
-            "lastName": "Souta",
-            "email": "denkisouta@protonmail.com",
-            "password": "denkicool4747"
-        },
-        {
-            "id": 3,
-            "firstName": "Lala",
-            "lastName": "Gonzalez",
-            "email": "llgonzalez@gmail.com",
-            "password": "lalalahahaha"
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Eri",
+      "lastName": "Kashiwagi",
+      "email": "erikashiwagi@hotmail.com",
+      "password": "blahblahblah"
+    },
+    {
+      "id": 2,
+      "firstName": "Denki",
+      "lastName": "Souta",
+      "email": "denkisouta@protonmail.com",
+      "password": "denkicool4747"
+    },
+    {
+      "id": 3,
+      "firstName": "Lala",
+      "lastName": "Gonzalez",
+      "email": "llgonzalez@gmail.com",
+      "password": "lalalahahaha"
+    },
+    {
+      "email": "shannaurelleg@gmail.com",
+      "password": "ShannHello@4756",
+      "firstName": "SHann",
+      "lastName": "Aurelle",
+      "id": 4
+    }
+  ]
 }
-    

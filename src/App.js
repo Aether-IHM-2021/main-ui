@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import {Container} from "react-bootstrap";
 import Login from "./Login";
 import Register from "./Register";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -8,7 +9,8 @@ import Scratch from "./Scratch";
 function App() {
 
   return (
-    <Router>
+    <Container style={{maxWidth: "480px", marginLeft: "auto", display: "flex", flexDirection: "vertical"}}>
+      <Router>
       <header variant="h1" className="App-header">
       </header>
       <Switch>
@@ -17,7 +19,9 @@ function App() {
         <Route exact path="/scratch"> <Scratch />  </Route>
       </Switch>
   
-    </Router>
+      </Router>
+    </Container>
+    
   );
 }
 export default App;
