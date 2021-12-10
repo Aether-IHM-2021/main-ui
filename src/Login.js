@@ -4,11 +4,8 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import {Container, Button, Form, Col, Row} from "react-bootstrap"; 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { AppContext } from "./App";
 
 const Login = () => {
-    // use this to switch between components
-    //const {changePage} = useContext(AppContext);
 
     const formik = useFormik({
         initialValues: {

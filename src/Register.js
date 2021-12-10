@@ -1,15 +1,11 @@
 import React, { createContext, useContext } from "react";
-import axios from "axios";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import {Container, Button, Form, Col, Row} from "react-bootstrap"; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Text from "./components/atoms/Text/index.jsx";
-import { AppContext } from "./App";
 
 const Register = () => {
-    // use this to switch between components
-    //const {changePage} = useContext(AppContext);
     
     const formik = useFormik({
         initialValues: {
