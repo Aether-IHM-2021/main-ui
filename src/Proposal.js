@@ -31,9 +31,14 @@ const Proposal = () => {
       <hr></hr>
       <div className="d-flex justify-content-between align-items-center">
         <DropdownButton id="dropdown-basic-button" title="Top Post">
-          <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-          <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-          <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+          <Dropdown.Item href="#/action-1" className="text-muted disabled">Sort by</Dropdown.Item>
+          <Dropdown.Item href="#/action-2">Hot</Dropdown.Item>
+          <Dropdown.Item href="#/action-3">Rising</Dropdown.Item>
+          <Dropdown.Item href="#/action-4">New</Dropdown.Item>
+          <Dropdown.Item href="#/action-5">Top (Past 24 Hours)</Dropdown.Item>
+          <Dropdown.Item href="#/action-6">Top (Past Month)</Dropdown.Item>
+          <Dropdown.Item href="#/action-7">Top (Past Year)</Dropdown.Item>
+          
         </DropdownButton>
         <a style={{ fontSize: "14px", color: "grey" }}>Show all</a>
         <a style={{ fontSize: "14px" }}>Proposal</a>
