@@ -28,7 +28,22 @@ const CreateTopic = () => {
           link: Yup.string()
         }),
         onSubmit: (values) => {
-          const data = {topic, ...values};
+          let data = {};
+          // conditional values for topics
+          if(topic === "proposals"){
+            const likes = 0;
+            const concerns = 0;
+            const concernsArray = Array();
+            data = {topic, likes, concerns, concernsArray, ...values};
+          }
+          else if(topic === "announcements"){
+            data = {topic, ...values};
+          }
+          else if(topic === "concerns"){
+            const proposalsId = 0;
+            data = {topic, proposalsId, ...values};
+          }
+          else{}
 
           const response = axios
             .post("http://localhost:8000/topics", data)

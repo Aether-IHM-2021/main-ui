@@ -9,6 +9,7 @@ import Verify2 from "./Verify2";
 import UserType from "./UserType";
 import CreateTopic from "./CreateTopic";
 import Main from "./Main";
+import Notifications from "./Notifications";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
@@ -44,6 +45,18 @@ function App() {
           <Route exact path="/create/:topic">
             {" "}
             <CreateTopic />{" "}
+          </Route>
+          <Route exact path="/verification">
+            {" "}
+            <Verification />{" "}
+          </Route>
+          <Route exact path="/verify2">
+            {" "}
+            <Verify2 />{" "}
+          </Route>
+          <Route exact path="/notifications">
+            {" "}
+            <Notifications />{" "}
           </Route>
           <Route exact path="/scratch">
             {" "}
