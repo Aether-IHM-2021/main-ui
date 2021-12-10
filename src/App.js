@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Login from "./Login";
 import Register from "./Register";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Scratch from "./Scratch";
 
 function App() {
 
@@ -11,8 +12,9 @@ function App() {
       <header variant="h1" className="App-header">
       </header>
       <Switch>
-        <Route exact path="/login"> <Login />   </Route>
-        <Route exact path="/register">  <Register /> </Route>
+        <Route exact path="/"> <Login />  </Route>
+        <Route exact path="/register"> <Register />  </Route>
+        <Route exact path="/scratch"> <Scratch />  </Route>
       </Switch>
   
     </Router>
