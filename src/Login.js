@@ -50,7 +50,10 @@ const Login = () => {
                 <Container className="p-0">
                     <Row>
                         <Col xs={{span: 4}}><Form.Check type="checkbox" label="Remember Me" /></Col>
-                        <Col xs={{span: 2, offset: 6}} className="ml-auto"><a className="text-muted" href="" style={{textDecoration: 'none'}}>Forgot your password?</a></Col>
+                        <Col xs={{span: 5, offset: 3}} 
+                        className="ml-auto">
+                        <a className="text-muted" href="" style={{textDecoration: 'none'}}>Forgot your password?</a>
+                        </Col>
                     </Row>  
                 </Container>
                 
@@ -66,11 +69,11 @@ const Login = () => {
             </Form>
             <Container className="mx-auto">
                     <Row>
-                        <Col xs={{span: 5}}></Col>
-                        <Col xs={{span: 2}}>
+                        <Col xs={{span: 3}}></Col>
+                        <Col xs={{span: 7}}>
                         <a className="text-muted text-center" href="" style={{textDecoration: 'none'}}>Don't have an account?</a>
                         </Col>
-                        <Col xs={{span: 5}}></Col>
+                        <Col xs={{span: 2}}></Col>
                     </Row>
             </Container>
         </Container>

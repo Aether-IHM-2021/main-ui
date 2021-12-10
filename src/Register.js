@@ -4,9 +4,12 @@ import * as Yup from "yup";
 import {Container, Button, Form, Col, Row} from "react-bootstrap"; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Text from "./components/atoms/Text/index.jsx";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 
 const Register = () => {
+
+    const {userType} = useParams();
     
     const formik = useFormik({
         initialValues: {
@@ -32,11 +35,13 @@ const Register = () => {
               /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
               "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and one special case Character"
             ),
+            userType: Yup.string(),
             confirmPassword: Yup.string()
             .oneOf([Yup.ref('password'), null], 'Passwords must match')
         }),
         onSubmit: (values) => {
-            const {confirmPassword, ...data} = values;
+            const {confirmPassword, ...others} = values;
+            const data = { ...others, userType}
             const response = axios.post("http://localhost:8000/users", data).catch((err) => {
                 if(err && err.response){
                     console.log("Error: ", err);
@@ -118,17 +123,9 @@ const Register = () => {
 
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                <Container className="p-0">
-                    <Row>
-                        <Col xs={{span: 4}}><Form.Check type="checkbox" label="Remember Me" /></Col>
-                        <Col xs={{span: 2, offset: 6}} className="ml-auto"><a className="text-muted" href="" style={{textDecoration: 'none'}}>Forgot your password?</a></Col>
-                    </Row>  
-                </Container>
-                
-                </Form.Group>
                 <Container>
                     <Row>
+                        
                         <Col as={Button} xs={{span: 8, offset: 2}} variant="primary" type="submit">
                             REGISTER
                         </Col>

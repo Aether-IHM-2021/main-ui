@@ -6,6 +6,7 @@ import Register from "./Register";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Scratch from "./Scratch";
 import Main from "./Main";
+import UserType from "./UserType";
 
 function App() {
   return (
@@ -15,8 +16,9 @@ function App() {
       </header>
       <Switch>
         <Route exact path="/"> <Main />  </Route>
+        <Route exact path="/userType"> <UserType /> </Route>
         <Route exact path="/login"> <Login /> </Route>
-        <Route exact path="/register"> <Register />  </Route>
+        <Route exact path="/register/:userType"> <Register />  </Route>
         <Route exact path="/scratch"> <Scratch />  </Route>
       </Switch>
   
