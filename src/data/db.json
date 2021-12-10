@@ -1,32 +1,47 @@
 {
   "users": [
     {
-      "id": 1,
-      "firstName": "Eri",
-      "lastName": "Kashiwagi",
-      "email": "erikashiwagi@hotmail.com",
-      "password": "blahblahblah"
+      "email": "halloriri@gmail.com",
+      "password": "ShannHello@5647",
+      "firstName": "Hallo",
+      "lastName": "Eri",
+      "id": 1
     },
     {
-      "id": 2,
-      "firstName": "Denki",
-      "lastName": "Souta",
-      "email": "denkisouta@protonmail.com",
-      "password": "denkicool4747"
-    },
-    {
-      "id": 3,
-      "firstName": "Lala",
-      "lastName": "Gonzalez",
-      "email": "llgonzalez@gmail.com",
-      "password": "lalalahahaha"
+      "email": "hshihihi@yahoo.com",
+      "password": "ShannHello@4756",
+      "firstName": "Hallo",
+      "lastName": "ShiShi",
+      "userType": {
+        "userType": "citizen"
+      },
+      "id": 2
     },
     {
       "email": "shannaurelleg@gmail.com",
-      "password": "ShannHello@4756",
-      "firstName": "SHann",
+      "password": "ShannHello@5647",
+      "firstName": "Shann",
       "lastName": "Aurelle",
+      "userType": "citizen",
+      "id": 3
+    },
+    {
+      "email": "santadecember@yahoo.com",
+      "password": "GiftsToAll@1225",
+      "firstName": "Santa ",
+      "lastName": "Claus",
+      "userType": "official",
       "id": 4
+    }
+  ],
+  "topics": [
+    {
+      "topic": "announcements",
+      "title": "My Daily Jouney",
+      "description": "Fun",
+      "category": "Social",
+      "link": "https://youtube.com",
+      "id": 1
     }
   ]
 }
