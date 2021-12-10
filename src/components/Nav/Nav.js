@@ -18,8 +18,13 @@ import {
 
 const Navigation = ( props ) => {
   return (
-    <div>
-      <nav className="navbar fixed-bottom navbar-light" role="navigation">
+    <div >
+      <nav className="navbar fixed-bottom navbar-light my-0" 
+      style={{
+        maxWidth: "480px",
+        marginLeft: "35%",
+      }}
+      role="navigation">
         <Nav className="w-100">
           <div className=" d-flex align-items-center justify-content-evenly w-100 bg-white">
             <NavItem className=" d-flex align-items-center justify-content-evenly w-100 bg-white">
