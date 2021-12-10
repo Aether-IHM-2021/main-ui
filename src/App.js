@@ -3,17 +3,20 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import Login from "./Login";
 import Register from "./Register";
-import "bootstrap/dist/css/bootstrap.min.css";
 import Scratch from "./Scratch";
+import Verification from "./Verification";
+import Verify2 from "./Verify2";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
     <Container
       style={{
         maxWidth: "480px",
-        marginLeft: "auto",
+        height: "100vh",
+        margin: "auto",
         display: "flex",
-        flexDirection: "vertical",
+        flexDirection: "column",
       }}
     >
       <Router>
@@ -30,6 +33,14 @@ function App() {
           <Route exact path="/scratch">
             {" "}
             <Scratch />{" "}
+          </Route>
+          <Route exact path="/verify">
+            {" "}
+            <Verification />{" "}
+          </Route>
+          <Route exact path="/verify2">
+            {" "}
+            <Verify2 />{" "}
           </Route>
         </Switch>
       </Router>
