@@ -1,9 +1,9 @@
-import React, { createContext, useContext } from "react";
-import axios from "axios";
+import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import {Container, Button, Form, Col, Row} from "react-bootstrap"; 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Text from "./components/atoms/Text/index.jsx";
 
 const Login = () => {
 
@@ -25,7 +25,7 @@ const Login = () => {
 
     return (
         <Container>
-            <h1 variant="h1"> LOG IN </h1>
+            <Text variant="h2"> LOGIN </Text>
             <Form>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
 

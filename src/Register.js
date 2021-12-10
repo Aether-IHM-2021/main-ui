@@ -1,9 +1,10 @@
-import React, { createContext, useContext } from "react";
+import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import {Container, Button, Form, Col, Row} from "react-bootstrap"; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Text from "./components/atoms/Text/index.jsx";
+import axios from "axios";
 
 const Register = () => {
     
@@ -35,16 +36,26 @@ const Register = () => {
             .oneOf([Yup.ref('password'), null], 'Passwords must match')
         }),
         onSubmit: (values) => {
-            // do what is needed to the data :>
+            const {confirmPassword, ...data} = values;
+            const response = axios.post("http://localhost:8000/users", data).catch((err) => {
+                if(err && err.response){
+                    console.log("Error: ", err);
+                }
+            });
+
+            if(response && response.data){
+                console.log(response.data.message);
+            }
+
         }
     });
 
     return (
         <Container>
             <Text variant="h2"> REGISTER </Text>
-            <h1 variant="h1"> REGISTER </h1>
-            <Form>
-                <Form.Group className="mb-3" controlId="formBasicName">
+            
+            <Form onSubmit={formik.handleSubmit}>
+                <Form.Group className="mb-3">
                 <Container className="p-0 m-0">
                 
                 <Row>
@@ -75,7 +86,7 @@ const Register = () => {
                 
                 </Form.Group>
                 
-                <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Group className="mb-3">
                 
                 <Form.Control id="email" name="email" type="email" placeholder="Email" 
                 onChange={formik.handleChange}
@@ -85,7 +96,7 @@ const Register = () => {
                 {formik.errors.email && formik.touched.email ? <p>{formik.errors.email}</p> : null}
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Group className="mb-3">
                 
                 <Form.Control id="password" name="password" type="text" placeholder="Password"  
                 onChange={formik.handleChange}
@@ -96,7 +107,7 @@ const Register = () => {
 
                 </Form.Group>
                 
-                <Form.Group className="mb-3" controlId="formBasicConfirmPassword">
+                <Form.Group className="mb-3">
 
                 <Form.Control id="confirmPassword" name="confirmPassword" type="password" placeholder="Confirm Password"   
                 onChange={formik.handleChange}
