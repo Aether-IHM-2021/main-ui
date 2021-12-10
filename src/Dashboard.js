@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.css";
-import { BsFillGearFill } from "react-icons/bs";
+import { BsFillGearFill,BsStar } from "react-icons/bs";
 import { Dropdown, DropdownButton, Card, Button } from "react-bootstrap";
 import Logo from "./assets/download.jpg";
 const Dashboard = () => {
@@ -41,43 +41,46 @@ const Dashboard = () => {
         <a style={{ fontSize: "14px" }}>Concerns</a>
       </div>
       <div className="pt-5">
-        <Card style={{ width: "100%" }}>
-          <Card.Img height="200" variant="top" src={Logo} />
+        <Card style={{ width: "100%" }} >
+          <Card.Img height="200" variant="top" src="https://www.adb.org/sites/default/files/styles/content_media/public/content-media/6402-philippines-cleaning-pasig-river-feature-01.jpg?itok=SOhmA1xZ" />
           <Card.Body>
             <Card.Title>
-              Proposal for construction of more public library
+              Christmas Clean Up Drive
             </Card.Title>
             <small className="text-muted">
-              December 12, 2021 · Juan Dela Cruz
+              December 26, 2021 · LGU of Pasay City
             </small>
             <Card.Text>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has...
+            "It has long been a challenge trying to rehabilitate the Pasig River. Environmentally it is pretty devastated,"
+            <br></br>
+            Click to participate: <a href="/participate">Join Now!</a>
             </Card.Text>
             <small className="text-muted">
-              <strong>580</strong> out of 1,000 citizens agree
+              <strong>1,224</strong> citizens are joining
+            </small>
+            <div className="col-sm-12 d-flex justify-content-end">
+            <BsStar/>
+            </div>
+          </Card.Body>
+        </Card>
+        <Card style={{ width: "100%" }} className="mt-3">
+          <Card.Img height="200" variant="top" src="http://4.bp.blogspot.com/-hsqL4cku7NM/VD4fvqd0zeI/AAAAAAAAXOg/Q-uukYGHEII/s1600/DSCN1266.JPG" />
+          <Card.Body>
+            <Card.Title>
+              No Manhole Cover | May nahulog na!
+            </Card.Title>
+            <small className="text-muted">
+              December 07, 2021 · Ronald James Dizon
+            </small>
+            <Card.Text>
+              There's an open manhole along the street of Mapayapa. Looking forward to cover this Mayor!
+            </Card.Text>
+            <small className="text-muted">
+              <strong>Status :</strong> Under Review
             </small>
           </Card.Body>
         </Card>
-        <Card style={{ width: "100%" }}>
-          <Card.Img height="200" variant="top" src={Logo} />
-          <Card.Body>
-            <Card.Title>
-              Proposal for construction of more public library
-            </Card.Title>
-            <small className="text-muted">
-              December 12, 2021 · Juan Dela Cruz
-            </small>
-            <Card.Text>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has...
-            </Card.Text>
-            <small className="text-muted">
-              <strong>580</strong> out of 1,000 citizens agree
-            </small>
-          </Card.Body>
-        </Card>
-        <Card style={{ width: "100%" }}>
+        <Card style={{ width: "100%" }}  className="mt-3">
           <Card.Img height="200" variant="top" src={Logo} />
           <Card.Body>
             <Card.Title>

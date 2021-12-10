@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Text from "./components/atoms/Text/index.jsx";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import { useHistory } from "react-router/cjs/react-router.min";
+import { useHistory } from "react-router";
 
 const Register = () => {
   let history = useHistory();
@@ -43,6 +43,8 @@ const Register = () => {
       ),
     }),
     onSubmit: (values) => {
+      localStorage.setItem("firstName",values.firstName);
+      localStorage.setItem("lastName",values.lastName);
       setTimeout(() => {
         history.push("/login");
       }, 3000);
@@ -109,7 +111,7 @@ const Register = () => {
           <Form.Control
             id="password"
             name="password"
-            type="text"
+            type="password"
             placeholder="Password"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
@@ -161,6 +163,13 @@ const Register = () => {
               xs={{ span: 8, offset: 2 }}
               variant="primary"
               type="submit"
+              onClick={(values) => {
+                localStorage.setItem("firstName",formik.values.firstName);
+                localStorage.setItem("lastName",formik.values.lastName);
+                setTimeout(() => {
+                  history.push("/login");
+                }, 3000);
+              }}
             >
               REGISTER
             </Col>

@@ -5,12 +5,10 @@ import * as Yup from "yup";
 import {Container, Button, Form, Col, Row} from "react-bootstrap"; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Text from "./components/atoms/Text/index.jsx";
-import { useParams } from "react-router";
-import axios from "axios";
 import { useHistory } from "react-router";
 
-const CreateTopic = () => {
-  const inputFile = useRef(null);
+const Announcement = () => {
+    const inputFile = useRef(null);
   const [selectedFile, setSelectedFile] = useState();
   const [preview, setPreview] = useState();
   const [disabled, setDisabled] = useState();
@@ -41,7 +39,6 @@ const CreateTopic = () => {
   };
   let history = useHistory();
     
-    const { topic } = useParams();
 
     const formik = useFormik({
         initialValues: {
@@ -68,40 +65,12 @@ const CreateTopic = () => {
           setTimeout(() => {
             history.push("/dashboard");
           },2000)
-          // let data = {};
-          // // conditional values for topics
-          // if(topic === "proposals"){
-          //   const likes = 0;
-          //   const concerns = 0;
-          //   const concernsArray = Array();
-          //   data = {topic, likes, concerns, concernsArray, ...values};
-          // }
-          // else if(topic === "announcements"){
-          //   data = {topic, ...values};
-          // }
-          // else if(topic === "concerns"){
-          //   const proposalsId = 0;
-          //   data = {topic, proposalsId, ...values};
-          // }
-          // else{}
-
-    //       const response = axios
-    //         .post("http://localhost:8000/topics", data)
-    //         .catch((err) => {
-    //           if (err && err.response) {
-    //             console.log("Error: ", err);
-    //           }
-    //         });
-    // 
-    //       if (response && response.data) {
-    //         console.log(response.data.message);
-    //       }
         }
       });
     
   return (
         <Container className="mt-2">
-          <Text variant="h2" >New Proposal</Text>
+          <Text variant="h2" >New Announcements</Text>
     
           <Form onSubmit={formik.handleSubmit}>
 
@@ -210,4 +179,4 @@ const CreateTopic = () => {
   );
 };
 
-export default CreateTopic;
+export default Announcement

@@ -14,3 +14,17 @@
 .bottom-tab-label {
   font-size: 12px;
 }
+
+
+
+.dropdown-menu {
+  top: auto;
+  bottom: 100%;
+  margin-top: 0;
+}
+
+#mydropup{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+}

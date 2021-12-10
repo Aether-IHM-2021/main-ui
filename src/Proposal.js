@@ -68,8 +68,7 @@ const Proposal = () => {
               December 12, 2021 · Juan Dela Cruz
             </small>
             <Card.Text>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has...
+            Now, just imagine if we have at least one public library in each congressional district. These district libraries would complement the provincial, city and municipal public libraries, and the libraries of local and state colleges and universities.
             </Card.Text>
             <small className="text-muted">
               <strong>580</strong> out of 1,000 citizens agree

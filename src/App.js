@@ -13,7 +13,10 @@ import Dashboard from "./Dashboard";
 import Notifications from "./Notifications";
 import Navigation from "./components/Nav/Nav";
 import Proposal from "./Proposal";
+import Announcement from "./Announcement";
 import Profile from "./Profile";
+import Concern from "./Concern";
+import Participate from "./Participate";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
@@ -78,6 +81,18 @@ function App() {
           <Route exact path="/profile">
             {" "}
             <Profile />{" "}
+          </Route>
+          <Route exact path="/announcement">
+            {" "}
+            <Announcement />{" "}
+          </Route>
+          <Route exact path="/concern">
+            {" "}
+            <Concern />{" "}
+          </Route>
+          <Route exact path="/participate">
+            {" "}
+            <Participate />{" "}
           </Route>
         </Switch>
       </Router>
