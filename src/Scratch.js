@@ -10,4 +10,4 @@ const Scratch = () => {
     )
 }
 
-export default Scratch
+export default Scratch;
