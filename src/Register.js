@@ -137,25 +137,6 @@ const Register = () => {
           ) : null}
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formBasicCheckbox">
-          <Container className="p-0">
-            <Row>
-              <Col xs={{ span: 4 }}>
-                <Form.Check type="checkbox" label="Remember Me" />
-              </Col>
-              <Col xs={{ span: 2, offset: 6 }} className="ml-auto">
-                <a
-                  className="text-muted"
-                  href=""
-                  style={{ textDecoration: "none" }}
-                >
-                  Forgot your password?
-                </a>
-              </Col>
-            </Row>
-          </Container>
-        </Form.Group>
-
         <Container>
           <Row>
             <Col
