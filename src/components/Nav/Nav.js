@@ -22,7 +22,7 @@ const Navigation = ( props ) => {
       <nav className="navbar fixed-bottom navbar-light my-0" 
       style={{
         maxWidth: "480px",
-        marginLeft: "35%",
+        margin: "0 auto",
       }}
       role="navigation">
         <Nav className="w-100 m-0">
