@@ -11,9 +11,9 @@ import axios from "axios";
 const Notifications = () => {
 
     return (
-        <Container> 
+        <Container className="mt-3"> 
             <Text variant="h2">Notifications</Text>
-            <Stack gap={4}>
+            <Stack gap={4} className="mt-3">
             <Notification title={"Project Lingkod"} />
             <Notification title={"Cleanup Maginhawa"} />
             </Stack>

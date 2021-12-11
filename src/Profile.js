@@ -16,9 +16,9 @@ const Profile = () => {
       </div>
       <hr></hr>
       <div className="d-flex justify-content-evenly align-items-center">
-        <a className="btn btn-options m-0" style={{ padding:"10px", borderRadius: "25px" }}>Starred Projects</a>
-        <a className="btn btn-options m-0" style={{ padding:"10px", borderRadius: "25px" }}>Raised Concerns</a>
-        <a className="btn btn-options m-0" style={{ padding:"10px", borderRadius: "25px" }}>Accomplished Projects</a>
+        <strong><a className="btn btn-options m-0" style={{ padding:"10px", borderRadius: "25px" }}>Starred Projects</a></strong>
+        <strong><a className="btn btn-options m-0" style={{ padding:"10px", borderRadius: "25px" }}>Raised Concerns</a></strong>
+        <strong><a className="btn btn-options m-0" style={{ padding:"10px", borderRadius: "25px" }}>Accomplished Projects</a></strong>
       </div>
       <hr></hr>
      
