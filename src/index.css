@@ -33,10 +33,11 @@ code {
 }
 
 .search {
-  padding: 5px;
-  border-radius: 5px;
+  padding: 5px 10px;
+  border-radius: 25px;
   border: none;
-  border: 1px solid black;
+  color: #a0aec0;
+  background-color: #edf2f7;
 }
 
 .bg-grey {

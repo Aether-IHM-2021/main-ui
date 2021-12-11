@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.css";
-import { BsFillGearFill,BsStar } from "react-icons/bs";
+import { BsFillGearFill,BsStar, BsSearch } from "react-icons/bs";
 import { Dropdown, DropdownButton, Card, Button } from "react-bootstrap";
 import Logo from "./assets/download.jpg";
 const Dashboard = () => {
@@ -8,7 +8,8 @@ const Dashboard = () => {
     <>
       <div className="mt-3 d-flex justify-content-between align-items-center">
         <div className="dp"></div>
-        <span>
+        <span className="search">
+          <BsSearch className="text-muted" />
           <input className="search" type="text" placeholder="search" />
         </span>
         <BsFillGearFill />
