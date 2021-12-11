@@ -25,9 +25,9 @@ const Navigation = ( props ) => {
         marginLeft: "35%",
       }}
       role="navigation">
-        <Nav className="w-100">
-          <div className=" d-flex align-items-center justify-content-evenly w-100 bg-white">
-            <NavItem className=" d-flex align-items-center justify-content-evenly w-100 bg-white">
+        <Nav className="w-100 m-0">
+          <div className=" d-flex align-items-center justify-content-evenly w-100 bg-white m-0">
+            <NavItem className=" d-flex align-items-center justify-content-evenly w-100 bg-white py-2 m-0">
               <NavLink
                 to="/dashboard"
                 className="nav-link"

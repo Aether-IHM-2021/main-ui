@@ -6,7 +6,7 @@ import Logo from "./assets/download.jpg";
 const Dashboard = () => {
   return (
     <>
-      <div className="my-3 d-flex justify-content-between align-items-center">
+      <div className="mt-3 d-flex justify-content-between align-items-center">
         <div className="dp"></div>
         <span>
           <input className="search" type="text" placeholder="search" />
