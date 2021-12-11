@@ -15,17 +15,17 @@ const Proposal = () => {
       </div>
       <hr></hr>
       <div className="d-flex justify-content-between">
-        <button style={{ borderRadius: "25px" }} className="btn btn-primary">
-          Education
+        <button style={{ borderRadius: "25px" }} className="btn btn-options">
+          <strong>Education</strong>
         </button>
-        <button style={{ borderRadius: "25px" }} className="btn btn-primary">
-          Social
+        <button style={{ borderRadius: "25px" }} className="btn btn-options">
+          <strong>Social</strong>
         </button>
-        <button style={{ borderRadius: "25px" }} className="btn btn-primary">
-          Employment
+        <button style={{ borderRadius: "25px" }} className="btn btn-options">
+          <strong>Employment</strong>
         </button>
-        <button style={{ borderRadius: "25px" }} className="btn btn-primary">
-          Health
+        <button style={{ borderRadius: "25px" }} className="btn btn-options">
+          <strong>Health</strong>
         </button>
       </div>
       <hr></hr>

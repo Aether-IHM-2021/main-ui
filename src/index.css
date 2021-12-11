@@ -44,3 +44,19 @@ code {
   width: 100%;
   background-color: grey;
 }
+
+.btn-options{
+  background-color: #e8f0f8;
+  border: 1px solid #e8f0f8;
+  font-weight: bold;
+}
+
+.btn-options:hover{
+
+    border: 1px solid #bee3f8;
+    background-color: #bee3f8;
+    color: #124d87;
+    
+    transition-duration: 0.3s;
+
+}
