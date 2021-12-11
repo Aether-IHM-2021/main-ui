@@ -28,6 +28,7 @@ function App() {
         margin: "auto",
         display: "flex",
         flexDirection: "column",
+        padding:"0"
       }}
     >
       <Router>
