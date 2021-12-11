@@ -46,7 +46,7 @@ const Navigation = ( props ) => {
               <BsPlusSquareFill />
             </button>
             <div class="dropdown-menu w-50">
-              <a class="dropdown-item" href="/proposal"><BsJournalCheck/><span style={{marginLeft:"15px"}}>Proposal</span></a>
+              <a class="dropdown-item" href="/create/:topic"><BsJournalCheck/><span style={{marginLeft:"15px"}}>Proposal</span></a>
               <a class="dropdown-item" href="/announcement"><BsMegaphoneFill/><span style={{marginLeft:"15px"}}>Announcement</span></a>
               <a class="dropdown-item" href="/concern"><BsExclamationDiamond/><span style={{marginLeft:"15px"}}>Concern</span></a>
               </div>

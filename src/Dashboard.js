@@ -76,8 +76,6 @@ const Dashboard = () => {
             topic={"concern"}
             imageSrc={"http://4.bp.blogspot.com/-hsqL4cku7NM/VD4fvqd0zeI/AAAAAAAAXOg/Q-uukYGHEII/s1600/DSCN1266.JPG"}
         />
-        {/* makeshift padding bottom */}
-        <br/><br/><br/>
       </div>
     </>
   );

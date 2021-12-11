@@ -33,7 +33,6 @@ function App() {
     >
       <Router>
         <header variant="h1" className="App-header"></header>
-        <Navigation />
         <Switch>
           <Route exact path="/">
             {" "}
@@ -96,6 +95,8 @@ function App() {
             <Participate />{" "}
           </Route>
         </Switch>
+        <br/><br/><br/>
+        <Navigation />
       </Router>
     </Container>
   );
