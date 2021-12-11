@@ -18,6 +18,7 @@ const CardPosts = ({topic, agreeCount, disagreeCount, title, name, date, descrip
         display: "flex",
         justifyContent: "space-between",
         padding: "1em",
+        maxHeight: "13em",
     }
     const imgContainerStyle = {
         background: "#E2E8F0",
@@ -25,12 +26,14 @@ const CardPosts = ({topic, agreeCount, disagreeCount, title, name, date, descrip
         boxSizing: "border-box",
         borderRadius: "8px",
         width:"36%",
+        height: "100%",
+        overflow: "hidden",
     }
     const flexRowStyle = {display: "flex", justifyContent: "space-between", gap: "0.5em"}
 
     return (
         <div style={containerStyle}>
-            <div style={imgContainerStyle}></div>
+            <div style={imgContainerStyle}><img src={imageSrc} alt={imageSrc} style={{objectFit:"contain", height:"100%"}}/></div>
             <div style={{display:"flex", flexDirection:"column", width:"60%", gap: "0.5em",}}>
                 <Text variant="title" style={{color:`${COLOR.gray[700]}`}}>{title}</Text>
                 <Text variant="tag" style={{color:`${COLOR.gray[500]}`}}>{name} <strong>·</strong> {date}</Text>
