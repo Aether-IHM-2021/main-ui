@@ -1,18 +1,22 @@
 import React from "react";
-import { Dropdown, DropdownButton, Card, Button } from "react-bootstrap";
+import { Dropdown, DropdownButton, Card, Badge } from "react-bootstrap";
 import Logo from "./assets/download.jpg";
 
 import "./index.css";
 const Profile = () => {
   return (
     <>
-      <div className="bg-grey d-flex justify-content-center align-items-end"></div>
-      <div className="dprofile"></div>
+      <div className="bg-grey d-flex justify-content-center align-items-end">
+          <div className="dprofile"></div>
+      </div>
+      
       <div className="mt-3 d-flex justify-content-center align-items-center flex-column">
         <p className="mt-5 text-center">{localStorage.getItem("firstName")} {localStorage.getItem("lastName")}</p>
-        <button style={{ borderRadius: "25px" }} className="btn btn-danger">
-          Not Verified
-        </button>
+        <a href="\verification">
+            <Badge pill bg="danger">
+                Not verified
+            </Badge>
+        </a>
       </div>
       <hr></hr>
       <div className="d-flex justify-content-evenly align-items-center">
